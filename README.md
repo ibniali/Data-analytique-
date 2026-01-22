@@ -1,44 +1,69 @@
 
-=== Environment Variables ===
-SHELL = /data/data/com.termux/files/usr/bin/bash
-COLORTERM = truecolor
-HISTCONTROL = ignoreboth
-PREFIX = /data/data/com.termux/files/usr
-PWD = /data/data/com.termux/files/home
-TERMUX_VERSION = googleplay.2026.01.07
-SYSTEMSERVERCLASSPATH = /system/framework/com.android.location.provider.jar:/system/framework/services.jar:/system/framework/ethernet-service.jar:/system/framework/ssrm.jar:/system/framework/semwifi-service.jar:/apex/com.android.appsearch/javalib/service-appsearch.jar:/apex/com.android.art/javalib/service-art.jar:/apex/com.android.media/javalib/service-media-s.jar:/apex/com.android.permission/javalib/service-permission.jar:/apex/com.samsung.android.ipm/javalib/service-samsung-ipm.jar:/apex/com.samsung.android.shell/javalib/service-samsung-privilege.jar
-EXTERNAL_STORAGE = /sdcard
-LD_PRELOAD = /data/data/com.termux/files/usr/lib/libtermux-exec.so
-HOME = /data/data/com.termux/files/home
-LANG = en_US.UTF-8
-DEX2OATBOOTCLASSPATH = /apex/com.android.art/javalib/core-oj.jar:/apex/com.android.art/javalib/core-libart.jar:/apex/com.android.art/javalib/okhttp.jar:/apex/com.android.art/javalib/bouncycastle.jar:/apex/com.android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/framework-graphics.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/knoxsdk.jar:/system/framework/knoxanalyticssdk.jar:/system/framework/uibc_java.jar:/system/framework/SmpsManager.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/mediatek-ims-base.jar:/system/framework/sem-telephony-common.jar:/apex/com.android.i18n/javalib/core-icu4j.jar
-TMPDIR = /data/data/com.termux/files/usr/tmp
-ANDROID_DATA = /data
-ANDROID_STORAGE = /storage
-TERM = xterm-256color
-ASEC_MOUNTPOINT = /mnt/asec
-TERMUX_EXEC__PROC_SELF_EXE = /data/data/com.termux/files/usr/bin/python
-ANDROID_I18N_ROOT = /apex/com.android.i18n
-SHLVL = 1
-ANDROID_ROOT = /system
-BOOTCLASSPATH = /apex/com.android.art/javalib/core-oj.jar:/apex/com.android.art/javalib/core-libart.jar:/apex/com.android.art/javalib/okhttp.jar:/apex/com.android.art/javalib/bouncycastle.jar:/apex/com.android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/framework-graphics.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/knoxsdk.jar:/system/framework/knoxanalyticssdk.jar:/system/framework/uibc_java.jar:/system/framework/SmpsManager.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/mediatek-ims-base.jar:/system/framework/sem-telephony-common.jar:/apex/com.android.i18n/javalib/core-icu4j.jar:/apex/com.android.appsearch/javalib/framework-appsearch.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.ipsec/javalib/android.net.ipsec.ike.jar:/apex/com.android.media/javalib/updatable-media.jar:/apex/com.android.mediaprovider/javalib/framework-mediaprovider.jar:/apex/com.android.mediaprovider/javalib/framework-pdf.jar:/apex/com.android.mediaprovider/javalib/framework-photopicker.jar:/apex/com.android.os.statsd/javalib/framework-statsd.jar:/apex/com.android.permission/javalib/framework-permission.jar:/apex/com.android.permission/javalib/framework-permission-s.jar:/apex/com.android.scheduling/javalib/framework-scheduling.jar:/apex/com.android.sdkext/javalib/framework-sdkextensions.jar:/apex/com.android.tethering/javalib/framework-connectivity.jar:/apex/com.android.tethering/javalib/framework-tethering.jar:/apex/com.android.wifi/javalib/framework-wifi.jar:/apex/com.samsung.android.ipm/javalib/framework-samsung-ipm.jar:/apex/com.samsung.android.shell/javalib/framework-samsung-privilege.jar
-ANDROID_TZDATA_ROOT = /apex/com.android.tzdata
-TMP = /data/data/com.termux/files/usr/tmp
-PATH = /data/data/com.termux/files/usr/bin:/product/bin:/apex/com.android.runtime/bin:/apex/com.android.art/bin:/system_ext/bin:/system/bin:/system/xbin:/odm/bin:/vendor/bin:/vendor/xbin
-ANDROID_ART_ROOT = /apex/com.android.art
-ANDROID_ASSETS = /system/app
-_ = /data/data/com.termux/files/usr/bin/python
-
-Cleaning data... Done.
-Analyzing data... Done.
-Count: 50
-First 5 elements: [94, 60, 74, 25, 32]
-Last 5 elements: [28, 21, 86, 26, 99]
-Random sample: 91
-
-Generating report... Done.
-Report Summary:
-Total entries: 50
-Sample Data: [94, 60, 74, 25, 32, 43, 63, 29, 66, 48]
-
-All tasks completed.
+cat > run_analysis.py <<EOF
+nt("=== System Information ===")
+    print("OS:", platform.system())
+    print("OS Version:", platform.versi> # run_analysis.py
+> # Advanced analysis command for any system or dataset
+>
+> import os
+> import platform
+> import datetime
+> import random
+>
+> # --- System Analysis Functions ---
+> def system_info():
+>     print("=== System Information ===")
+>     print("OS:", platform.system())
+>     print("OS Version:", platform.version())
+>     print("Architecture:", platform.architecture())
+>     print("Machine:", platform.machine())
+>     print("Processor:", platform.processor())
+>     print("Python Version:", platform.python_version())
+>     print()
+>
+> def environment_variables():
+>     print("=== Environment Variables ===")
+>     for key, value in os.environ.items():
+>         print(f"{key} = {value}")
+>     print()
+>
+> # --- Data Analysis Functions ---
+> def clean_data(data):
+>     print("Cleaning data... Done.")
+>     # Example: remove None or empty strings
+>     return [x for x in data if x is not None and x != ""]
+>
+> def analyze_data(data):
+>     print("Analyzing data... Done.")
+>     print("Count:", len(data))
+>     if data:
+>         print("First 5 elements:", data[:5])
+>         print("Last 5 elements:", data[-5:])
+>         print("Random sample:", random.choice(data))
+>     print()
+>
+> def generate_report(data):
+>     print("Generating report... Done.")
+>     print("Report Summary:")
+>     print("Total entries:", len(data))
+>     print("Sample Data:", data[:10])
+>     print()
+>
+> # --- Run All ---
+> def run_all():
+>     system_info()
+>     environment_variables()
+>
+>     # Example dataset for testing (يمكن استبداله ببيانات المشروع)
+>     dataset = [random.randint(0, 100) for _ in range(50)]
+>
+>     cleaned = clean_data(dataset)
+>     analyze_data(cleaned)
+>     generate_report(cleaned)
+>
+>     print("All tasks completed.")
+>
+> # --- Execute ---
+> if __name__ == "__main__":
+>     run_all()
+> EOF
